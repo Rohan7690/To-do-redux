@@ -25,12 +25,6 @@ function App() {
         <Sidebar isSidebarOpen={isSidebarOpen} />
         <TodoList />
       </div>
-      {isSidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-10 md:hidden"
-          onClick={() => setIsSidebarOpen(false)}
-        />
-      )}
     </div>
   );
 }

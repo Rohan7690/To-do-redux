@@ -4,6 +4,7 @@ import { logout } from '../store/authSlice';
 import { setFilter } from '../store/uiSlice';
 import { ListTodo, Calendar, Star, Clock, User, Plus, LogOut } from 'lucide-react';
 
+// eslint-disable-next-line react/prop-types
 export function Sidebar({ isSidebarOpen }) {
   const dispatch = useDispatch();
   const { user } = useSelector(state => state.auth);

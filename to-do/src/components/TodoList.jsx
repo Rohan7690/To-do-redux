@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addTask, toggleTask, toggleImportant } from '../store/taskSlice';
 import { Bell, Calendar, RotateCw, Star } from 'lucide-react';
 
-export function TodoList({ isSidebarOpen }) {
+// eslint-disable-next-line no-empty-pattern
+export function TodoList({ }) {
   const [newTodo, setNewTodo] = useState("");
   const dispatch = useDispatch();
   const todos = useSelector(state => state.tasks.tasks);

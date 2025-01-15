@@ -4,7 +4,8 @@ import { Search, Grid, List, Moon, Sun, Menu, X } from 'lucide-react';
 import { toggleTheme, toggleView, setSearchTerm } from '../store/uiSlice';
 import doit from '../assets/doit.png';
 
-export function NavBar({ isSidebarOpen, toggleSidebar }) {
+// eslint-disable-next-line react/prop-types
+export function NavBar({ toggleSidebar }) {
   const dispatch = useDispatch();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { isDarkTheme, isBlockView } = useSelector(state => state.ui);

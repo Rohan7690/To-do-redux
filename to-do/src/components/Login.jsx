@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../store/authSlice';
-import { ListTodoIcon } from 'lucide-react';
+
 import doit from '../assets/doit.png';
 
 export function Login() {
