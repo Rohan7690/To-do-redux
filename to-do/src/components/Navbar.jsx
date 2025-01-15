@@ -1,11 +1,13 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { Search, Grid, List, Moon, Sun, Menu, X } from 'lucide-react';
 import { toggleTheme, toggleView, setSearchTerm } from '../store/uiSlice';
 import doit from '../assets/doit.png';
-
-// eslint-disable-next-line react/prop-types
 export function NavBar({ toggleSidebar }) {
+NavBar.propTypes = {
+  toggleSidebar: PropTypes.func.isRequired,
+};
   const dispatch = useDispatch();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { isDarkTheme, isBlockView } = useSelector(state => state.ui);

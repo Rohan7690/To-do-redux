@@ -1,11 +1,14 @@
 
 import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import { logout } from '../store/authSlice';
 import { setFilter } from '../store/uiSlice';
 import { ListTodo, Calendar, Star, Clock, User, Plus, LogOut } from 'lucide-react';
 
-// eslint-disable-next-line react/prop-types
 export function Sidebar({ isSidebarOpen }) {
+    Sidebar.propTypes = {
+        isSidebarOpen: PropTypes.bool.isRequired,
+      };
   const dispatch = useDispatch();
   const { user } = useSelector(state => state.auth);
   const { currentFilter } = useSelector(state => state.ui);
@@ -69,6 +72,8 @@ export function Sidebar({ isSidebarOpen }) {
         {isSidebarOpen && <span className="truncate">Logout</span>}
       </button>
     </aside>
-  );
+    );
+
+
 }
 

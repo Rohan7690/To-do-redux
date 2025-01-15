@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className={`min-h-screen flex flex-col ${isDarkTheme ? 'dark' : ''}`}>
-      <NavBar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <NavBar toggleSidebar={toggleSidebar} />
       <div className="flex flex-1 overflow-hidden">
         <Sidebar isSidebarOpen={isSidebarOpen} />
         <TodoList />
