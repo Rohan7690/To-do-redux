@@ -2,7 +2,7 @@ import  { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Login } from './components/Login';
 import { Sidebar } from './components/Sidebar';
-import { NavBar } from './components/NavBar';
+import { NavBar } from './components/Navbar';
 import { TodoList } from './components/TodoList';
 
 function App() {
